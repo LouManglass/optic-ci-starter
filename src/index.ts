@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import {makeCiCliWithNamedRules, rulesets} from "@useoptic/api-checks";
 import {customRuleset} from "./ruleset";
 const packageJson = require('../package.json')
