@@ -21,9 +21,11 @@ runs:
   steps:
     - run: yarn install
       shell: bash
+      working-directory: ${{ github.action_path }}
     - run: >-
         yarn cli compare 
         --from ${{ inputs.from }}
         --to  ${{ inputs.to }}
         --ruleset ${{ inputs.ruleset }}
       shell: bash
+      working-directory: ${{ github.action_path }}
