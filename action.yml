@@ -23,7 +23,7 @@ runs:
       shell: bash
       working-directory: ${{ github.action_path }}
     - run: >-
-        yarn cli compare 
+        yarn ts-node src/index.ts compare 
         --from ${{ inputs.from }}
         --to  ${{ inputs.to }}
         --ruleset ${{ inputs.ruleset }}
