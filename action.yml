@@ -30,7 +30,7 @@ runs:
       working-directory: ${{ github.action_path }}
     - run: >-
         $GITHUB_ACTION_PATH/build/index.js compare 
-        --from ${{ inputs.from }}
-        --to  ${{ inputs.to }}
+        --from  ${{ github.head_ref }}:${{ inputs.from }}
+        --to  ${{ github.ref }}:${{ inputs.to }}
         --ruleset ${{ inputs.ruleset }}
       shell: bash
