@@ -42,5 +42,11 @@ export const rules = {
       }
     })
 
+    bodyProperties.requirement.must('dueDate must be optional', (property) => {
+      if (property.key === 'dueDate' && property.required) {
+        expect.fail(`${property.key} is required, and it should never be required.`);
+      }
+    });
+
   }
 }
